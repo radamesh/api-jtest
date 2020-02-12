@@ -22,6 +22,11 @@ public class UsersController {
 
 	@Autowired
 	private UsersRepository repository;
+	
+	@GetMapping("/test")
+	public String getPing() {
+		return "Poing";
+	}
 
 	@PostMapping("/inset-user")
 	public String insertUser(@RequestBody Users user) {
